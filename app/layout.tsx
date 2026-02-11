@@ -1,15 +1,18 @@
-export const metadata = {
+import "./globals.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
   title: "NEXT ASIA LINK | Member",
+  description: "Member dashboard",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja">
-      <body style={{ margin: 0 }}>{children}</body>
+      <body>
+        <div className="nal-bg" aria-hidden="true" />
+        {children}
+      </body>
     </html>
   );
 }
