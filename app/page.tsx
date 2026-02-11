@@ -1,19 +1,26 @@
+"use client";
+
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="nal-wrap">
-      <div className="nal-shell" style={{ padding: 22 }}>
-        <div className="nal-scan" aria-hidden="true" />
-        <div style={{ padding: 22 }}>
-          <div className="nal-brand">NEXT ASIA LINK</div>
-          <h1 className="nal-title" style={{ marginTop: 10 }}>member-page</h1>
-          <p className="nal-sub">会員ページへ移動します。</p>
-          <div style={{ marginTop: 16 }}>
-            <Link className="nal-link" href="/member">/member へ移動 →</Link>
-          </div>
+    <main className="container">
+      <section className="panel">
+        <div className="brand">NEXT ASIA LINK</div>
+        <h1 className="h1">member-page</h1>
+        <p className="sub">
+          ログイン後は会員ページ（ダッシュボード）へ移動します。
+        </p>
+
+        <div className="row">
+          <Link className="btn btnPrimary" href="/member">
+            /member へ移動 →
+          </Link>
+          <Link className="btn" href="/login">
+            /login（仮） →
+          </Link>
         </div>
-      </div>
+      </section>
     </main>
   );
 }
